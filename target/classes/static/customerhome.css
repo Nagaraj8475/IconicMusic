@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: black;
+  background-image: url("img/a14.png");
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(18, 16, 16, 0.943);
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.navbar {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.navbar-right {
+  flex: 1;
+  text-align: left;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-heading {
+  margin-top: 0;
+  font-size: 45px;
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  
+}
+
+.icon {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+}
+
+.sidebar {
+  margin-left: 0%;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+  float: left;
+}
+
+.button-container form {
+  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.button-container input[type="submit"] {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.button-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  margin-top: 20px;
+  margin-left: 31%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.song {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.song img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.song-name,
+.song-artist,
+.song-genre {
+  font-weight: bold;
+  color: black; /* Added */
+}
+
+.audio-play {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.audio-play:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #fff;
+  color: black;
+}
+
+th,
+td {
+  align-items: center;
+  padding: 10px;
+  text-align: left;
+  color: black; /* Added */
+}
+
+tbody tr {
+  background-color: #ffffff; /* Set background color to white for all rows */
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+}
+
+audio {
+  width: 300px;
+}
+
+.view-songs-heading {
+  margin-top: 1%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.right a {
+  text-decoration: none;
+  color: white;
+  margin-left: 16px;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cust{
+	padding-left:20px;
+	font-size:35px;
+}

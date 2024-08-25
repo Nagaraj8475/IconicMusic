@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Page</title>
+    <link rel="stylesheet" href="customerhome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+  </head>
+  <body>
+   <nav class="navbar">
+      <div class="navbar-left">
+        <img src="img/logo1.png" alt="Icon" class="icon" />
+        <h1 class="navbar-heading">Iconic Music</h1>
+      </div>
+       <div class="right">
+    	<a href="#">Premium</a>
+    	<a href="#">Download</a>
+   		<a href="#">Support</a>
+	</div>
+    </nav>
+
+    <div class="sidebar">
+      <div class="button-container">
+        <!-- Buttons added here -->
+ 		<p id="cust">Customer</p>
+        <br />
+        <div class="play">
+        <div th:unless="${ispremium}" class="non-premium">
+  			<form action="pay">
+            <input type="submit" value="GET PREMIUM" />
+          </form>
+        </div>
+        
+        <form action="logout">
+          <input type="submit" value="LOGOUT" />
+        </form>
+      </div>
+      <div th:if="${ispremium}" class="premium">
+      
+      </div>
+      </div>
+      <div class="content">
+        
+         <form action="submit_form_action" method="post">
+      </div>
+    </div>
+    <h2 class="view-songs-heading">Songs</h2>
+    <!-- Added form -->
+    <div class="container">
+      <form action="submit_form_action" method="post">
+        <table border="3">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Artist</th>
+              <th>Genre</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="song:${songs}">
+              <td th:text="${song.name}"></td>
+              <td th:text="${song.artist}"></td>
+              <td th:text="${song.genre}"></td>
+              <td>
+                <audio controls>
+                  <source th:src="${song.link}" type="audio/mpeg" />
+                </audio>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+  background-color: #000;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(18, 16, 16, 0.943); /* White color with 50% opacity */
+  background-image: url("img/a14.png"); /* Your background image */
+  background-size: cover; /* Cover the entire container */
+  background-blend-mode: overlay; /* Overlay the background image on the color */
+}
+
+.icon-text-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.icon {
+  width: 80px; /* Adjust icon width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between icon and text */
+}
+
+.large-text {
+  margin-top: 13px;
+  font-size: 36px; /* Adjust text size as needed */
+}
+
+form {
+  margin: 50px auto;
+  padding: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 30px;
+  position: relative;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 45px;
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.custom-image {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: calc(100% - 16px);
+  height: 42px;
+  padding: 8px;
+  margin-left: 1.5%;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  box-sizing: border-box;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  vertical-align: auto;
+}
+
+label.radio-label {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+textarea {
+  height: 90px;
+  margin-left: 3%;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 42px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}

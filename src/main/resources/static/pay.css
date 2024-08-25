@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1d1b1b;
+}
+
+header {
+  background-color: #101010;
+  height: 52px;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+nav {
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left img {
+  height: 50px;
+  width: 55px;
+  margin-top: 9px;
+  margin-right: 5px;
+}
+
+.left p {
+  color: white;
+  margin-left: 60px;
+  margin-top: -50px;
+  font-size: 40px;
+  font-family: "Jersey 20", sans-serif;
+}
+
+.right a {
+  text-decoration: none;
+  color: white;
+  margin-left: 16px;
+  padding: 20px;
+}
+
+.right-side {
+  background-image: url("img/pa1.png");
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
+  width: 60%;
+  background-repeat: no-repeat;
+  margin-top: -20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.left-side {
+  flex: 2;
+  padding: 20px;
+  color: white;
+}
+
+.left-side h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.left-side p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.left-side button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.subscription-features .feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+h3 {
+  margin-left: 10px;
+}
+.subscription-features img {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+}
+
+.subscription-features p {
+  margin: 0;
+  font-size: 14px;
+}
+

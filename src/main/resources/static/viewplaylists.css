@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: black;
+  background-image: url("img/a14.png");
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(18, 16, 16, 0.943);
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.navbar {
+  font-family: "Jersey 20", sans-serif;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-right {
+  flex: 1;
+  text-align: left;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-heading {
+  font-family: "Jersey 20", sans-serif;
+  font-size:45px;
+  font-weight: 400;
+  margin: 0;
+  margin-left: 10px;
+  color: #fff;
+  display: inline;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+}
+
+.sidebar {
+  margin-left: 0%;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+  float: left;
+}
+
+.button-container form {
+  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.button-container input[type="submit"] {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.button-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.numbered-list {
+  list-style: none; /* Remove default list styles */
+}
+
+.numbered-list li {
+  counter-increment: song-counter; /* Increment the counter for each list item */
+}
+
+.numbered-list li:before {
+  content: counter(song-counter); /* Display the counter number */
+  margin-right: 5px; /* Adjust spacing between number and audio controls */
+}
+
+table {
+  margin: 0 auto; /* Center the table horizontally */
+   margin-top: 20px;
+   background-color:white;
+}
+h2 {
+  text-align: center; /* Align the heading text to the center */
+   margin-bottom: 20px;
+   color:white;
+}
+th, td {
+  padding:20px; /* Add padding to the table headings and data cells */
+  position: relative; /* Make the table cells positioned relative */
+}
+.song-number {
+  position: absolute; /* Position the numbering absolutely */
+  top: 50%; /* Align the numbering vertically */
+  transform: translateY(-50%); /* Center the numbering vertically */
+  left: 0; /* Align the numbering to the left */
+  margin-right: 10px; /* Add space between numbering and audio controls */
+}
+
+audio {
+  display: inline-block; /* Ensure the audio controls are treated as inline block */
+  vertical-align: middle; /* Align the audio controls vertically */
+  margin-bottom:4px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.right a {
+  text-decoration: none;
+  color: white;
+  margin-left: 16px;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

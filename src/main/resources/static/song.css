@@ -1,0 +1,157 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: black;
+  background-image: url("img/a14.png");
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(18, 16, 16, 0.943);
+
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.navbar {
+  font-family: "Jersey 20", sans-serif;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+/* .navbar-left {
+    flex: 1;
+  } */
+
+.navbar-right {
+  flex: 1;
+  text-align: left;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.navbar-heading {
+	font-family: "Jersey 20", sans-serif;
+  font-size:45px;
+  font-weight: 400;
+  margin: 0;
+  margin-left: 10px; /* Adjust margin as needed */
+  color: #fff; /* Adjust color as needed */
+  display: inline; /* Ensure text displays inline */
+  vertical-align: middle; /* Align text vertically */
+}
+
+.icon {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+}
+
+.sidebar {
+  margin-left: 0%;
+  width: 200px; /* Adjust width as needed */
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+  float: left; /* Add this to float the sidebar to the left */
+}
+
+.button-container form {
+  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.button-container input[type="submit"] {
+  width: 100%; /* Set width to 100% */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0; /* Adjust padding as needed */
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+  cursor: pointer;
+}
+
+.button-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Add this CSS below the existing styles */
+.container {
+  margin-left: 220px; /* Adjust to match the width of the sidebar */
+  margin-top: 20px; /* Adjust margin top as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container form {
+  width: 300px; /* Adjust the width as needed */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: white;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.container label {
+  font-weight: bold;
+}
+
+.container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.container input[type="submit"] {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.container h1 {
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.right a {
+  text-decoration: none;
+  color: white;
+  margin-left: 16px;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+

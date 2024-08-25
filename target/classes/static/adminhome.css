@@ -1,0 +1,169 @@
+* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: black;
+  background-image: url("img/a14.png");
+  font-family: "Open Sans", sans-serif;
+  background-color: rgba(18, 16, 16, 0.943);
+
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.navbar {
+  
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left:-8px;
+  margin-top:-8px;
+}
+
+/* .navbar-left {
+    flex: 1;
+  } */
+
+.navbar-right {
+  flex: 1;
+  text-align: left;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.navbar-heading {
+  font-family: "Jersey 20", sans-serif;
+  font-size:45px;
+  font-weight: 400;
+  
+  margin: 0;
+  margin-left: 10px; /* Adjust margin as needed */
+  color: #fff; /* Adjust color as needed */
+  display: inline; /* Ensure text displays inline */
+  vertical-align: middle; /* Align text vertically */
+}
+
+.icon {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+}
+
+.sidebar {
+  margin-left: 0%;
+  width: 200px; /* Adjust width as needed */
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+  float: left; /* Add this to float the sidebar to the left */
+  margin-top: -22px; 
+  margin-left:-7px;
+}
+
+.button-container form {
+  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.button-container input[type="submit"] {
+  width: 100%; /* Set width to 100% */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 0; /* Adjust padding as needed */
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+  cursor: pointer;
+}
+
+.button-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.song-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 220px; /* Add margin to create space for the sidebar */
+}
+
+.song {
+  width: 250px;
+  margin: 20px;
+  text-align: center;
+  background-color: black;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(226, 225, 225, 0.244);
+}
+
+.song img {
+  width: 100%;
+  height: 150px; /* Adjust image height as needed */
+  object-fit: cover; /* Ensure image covers the container */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.song img:hover {
+  transform: scale(1.1); /* Scale the image on hover */
+}
+
+.song:hover {
+  transform: scale(1.1);
+}
+.song p {
+  margin-top: 10px;
+  margin-bottom:10px;
+  padding-right:56px;
+ 
+  font-size: 14px; /* Adjust font size as needed */
+  color: white; /* Adjust color as needed */
+}
+
+audio {
+  width: 80%;
+  margin: 10px auto;
+}
+
+audio:focus {
+  outline: none;
+}
+
+p{
+	font-size:30px;
+	margin-left:50px;
+	margin-bottom:-20px;
+	
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.right a {
+  text-decoration: none;
+  color: white;
+  margin-left: 16px;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

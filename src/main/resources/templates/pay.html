@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html xmlns:th="https://www.thymeleaf.org">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="pay.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Jersey+20&family=Outfit:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+  </head>
+ <body>
+	<header>
+      <nav>
+        <div class="left">
+          <img src="img/logo1.png" alt="Icon" />
+          <p id="p">Iconic Music</p>
+        </div>
+        <div class="right">
+          <a href="#">Premium</a>
+          <a href="home.html">Download</a>
+          <a href="#">Support</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="left-side">
+        <h2>
+          Listen without limits. Try<br />
+          2 months of Premium for<br />
+          ₹119.
+        </h2>
+        <p>Only ₹119/month after. Cancel anytime.</p>
+        
+        <form id="payment-form">
+        <button type="submit" class="buy-button">Get Premium</button><br />
+        </form>
+        <h3>Subscription Features</h3>
+        <div class="subscription-features">
+          <div class="feature">
+            <img src="img/add.jpg" alt="Feature 1" />
+            <p>Ads free streaming</p>
+          </div>
+          <br />
+          <div class="feature">
+            <img src="img/call.png" alt="Feature 2" />
+            <p>Custom caller tune</p>
+          </div>
+          <br />
+          <div class="feature">
+            <img src="img/eq.png" alt="Feature 3" />
+            <p>Various types of equalizer</p>
+          </div>
+          <br />
+          <div class="feature">
+            <img src="img/d11.png" alt="Feature 4" />
+            <p>Dolby Atmos</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-side"></div>
+    </main>
+ 	
+
+  <script>
+$(document).ready(function() {
+    $(".buy-button").click(function(e) {
+        e.preventDefault();
+        var form = $(this).closest('form');
+        
+        
+        createOrder();
+    });
+});
+
+function createOrder() {
+  
+    $.post("/createOrder")
+        .done(function(order) {
+            order = JSON.parse(order);
+            var options = {
+                "key": "rzp_test_5m9NYAQdHF7n8C",
+                "amount": order.amount_due.toString(),
+                "currency": "INR",
+                "name": "Iconic Music",
+                "description": "Test Transaction",
+                "order_id": order.id,
+                "handler": function (response) {
+                    verifyPayment(response.razorpay_order_id, response.razorpay_payment_id, response.razorpay_signature);
+                },
+                "prefill": {
+                    "name": "Your Name",
+                    "email": "test@example.com",
+                    "contact": "9999999999"
+                },
+                "notes": {
+                    "address": "Your Address"
+                },
+                "theme": {
+                    "color": "#F37254"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        })
+        .fail(function(error) {
+            console.error("Error:", error);
+        });
+}
+
+function verifyPayment(orderId, paymentId, signature) {
+     $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
+         .done(function(isValid) {
+             if (isValid) {
+               alert("Payment successful");
+               window.location.href='payment-success';
+             } else {
+                 alert("Payment failed");
+                 window.location.href='payment-failure';
+             }
+         })
+         .fail(function(error) {
+             console.error("Error:", error);
+         });
+}
+</script>
+</body>
+</html>

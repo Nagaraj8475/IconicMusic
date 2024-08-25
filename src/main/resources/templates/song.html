@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADD SONG</title>
+    <link rel="stylesheet" href="song.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img src="img/logo1.png" alt="Icon" class="icon" />
+        <h1 class="navbar-heading">Iconic Music</h1>
+      </div>
+      <div class="right">
+    	<a href="#">Premium</a>
+    	<a href="#">Download</a>
+   		<a href="#">Support</a>
+	</div>
+    </nav>
+
+    <div class="sidebar">
+      <div class="button-container">
+        <!-- Buttons added here -->
+        <form action="addsong">
+          <input type="submit" value="ADD SONG" />
+        </form>
+
+        <form action="viewsongs">
+          <input type="submit" value="VIEW SONG" />
+        </form>
+
+        <form action="createplaylists">
+          <input type="submit" value="CREATE PLAYLISTS" />
+        </form>
+
+        <form action="viewplaylists">
+          <input type="submit" value="VIEW PLAYLIST" />
+        </form>
+
+        <form action="logout">
+          <input type="submit" value="LOGOUT" />
+        </form>
+      </div>
+    </div>
+
+    <!-- Added form -->
+    <div class="container">
+      <form action="addsongs" method="post">
+        <h1>Add Song</h1>
+        <br />
+        <label for="name">Song Name:</label><br />
+        <input type="text" id="name" name="name" /><br /><br />
+
+        <label for="artist">Song Artist:</label><br />
+        <input type="text" id="artist" name="artist" /><br /><br />
+
+        <label for="genre">Song Genre:</label><br />
+        <input type="text" id="genre" name="genre" /><br /><br />
+
+        <label for="link">Song Link:</label><br />
+        <input type="text" id="link" name="link" /><br /><br />
+
+        <input type="submit" value="ADD SONG" />
+      </form>
+    </div>
+  </body>
+</html>
